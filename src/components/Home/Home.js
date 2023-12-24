@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Home.css';
+import Header from "../Header/Header";
 
 const Home = () => (
-  <div>
-    یک تست است
-  </div>
+    <Header />
 );
 
 Home.propTypes = {};
