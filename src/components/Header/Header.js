@@ -24,23 +24,29 @@ class Header extends Component{
     }
 
 render(){
-    const {menuList , list} = this.state;
-    console.log(list);
-       return  <header className={'header'}>
-            <div className={'user-box'}>
-                <a href={'https://google.com'}>پنل کاربری</a>
-            </div>
-            <nav>
-                <ul>
-                    {list}
-                </ul>
-            </nav>
-            <div className={'logo'}>
-                <a>
-                    <img src={logo}/>
-                </a>
-            </div>
-        </header>
+    const {menuList , list , } = this.state;
+    if(window.innerWidth > 768){
+        return  (<header className={'header'}>
+                <div className={'user-box'}>
+                    <a href={'https://google.com'}>پنل کاربری</a>
+                </div>
+                <nav>
+                    <ul>
+                        {list}
+                    </ul>
+                </nav>
+                <div className={'logo'}>
+                    <a>
+                        <img src={logo}/>
+                    </a>
+                </div>
+            </header>
+        )
+    }else{
+        return (<header className={'mobile-header'}>
+            
+        </header>)
+    }
     }
 }
 export default Header;
