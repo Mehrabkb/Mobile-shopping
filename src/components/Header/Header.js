@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './Header.css';
 import logo from '../../images/logo.jpg';
 import menuButton from '../../images/menu.png';
+import menuCloseButton from '../../images/close.png';
 class Header extends Component{
 
     constructor(props) {
@@ -21,7 +22,9 @@ class Header extends Component{
         });
         this.setState({list : temp_list});
     }
-
+    menuButtonClick(){
+            document.querySelector('div.absolute-menu').classList.add('show');
+        }
 render(){
     const {menuList , list} = this.state;
     if(window.innerWidth > 768){
@@ -44,7 +47,7 @@ render(){
     }else{
         return (<header className={'mobile-header'}>
             <div className={'menu'}>
-                <button className={'menu-button'}>
+                <button className={'menu-button'} onClick={this.menuButtonClick} >
                     <img src={menuButton} />
                 </button>
             </div>
@@ -54,6 +57,11 @@ render(){
                 </a>
             </div>
             <div className={'empty'}></div>
+            <div className={'absolute-menu'}>
+                <button className={'close-absolute-menu'} >
+                    <img src={menuCloseButton} />
+                </button>
+            </div>
         </header>)
     }
     }
