@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Header.css';
 
-const menuList = ['خانه' , 'تماس با ما' , 'درباره ما']
+const menuList = ['خانه' , 'محصولات' , 'تماس با ما' , 'درباره ما']
 let list = [];
 
 menuList.forEach((item , index) =>{
@@ -12,6 +12,9 @@ menuList.forEach((item , index) =>{
 
 const Header = () => (
     <header className={'header'}>
+        <div className={'user-box'}>
+            <a href={'https://google.com'}>پنل کاربری</a>
+        </div>
         <nav>
             <ul>
                 {list}
