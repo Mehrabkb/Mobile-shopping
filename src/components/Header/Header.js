@@ -22,8 +22,12 @@ class Header extends Component{
         });
         this.setState({list : temp_list});
     }
-    menuButtonClick(){
-            document.querySelector('div.absolute-menu').classList.add('show');
+    menuButtonClick(status){
+            if(status == 'show'){
+                document.querySelector('div.absolute-menu').classList.add('show');
+            }else if(status == 'hide'){
+                document.querySelector('div.absolute-menu').classList.remove('show');
+            }
         }
 render(){
     const {menuList , list} = this.state;
@@ -47,7 +51,7 @@ render(){
     }else{
         return (<header className={'mobile-header'}>
             <div className={'menu'}>
-                <button className={'menu-button'} onClick={this.menuButtonClick} >
+                <button className={'menu-button'} onClick={() => this.menuButtonClick('show')} >
                     <img src={menuButton} />
                 </button>
             </div>
@@ -58,7 +62,7 @@ render(){
             </div>
             <div className={'empty'}></div>
             <div className={'absolute-menu'}>
-                <button className={'close-absolute-menu'} >
+                <button className={'close-absolute-menu'} onClick={() => this.menuButtonClick('hide')} >
                     <img src={menuCloseButton} />
                 </button>
             </div>
