@@ -13,17 +13,40 @@ class Slider extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            images : [image1 , image2 , image3]
+            images : [
+                {
+                    'img' : image1,
+                    'text' : 'به سایت ما خوش آمدید'
+                },
+                {
+                    'img' : image2,
+                    'text' : 'به سایت ما خوش آمدید'
+                },
+                {
+                    'img' : image3,
+                    'text' : 'به سایت ما خوش آمدید'
+                }
+            ]
         }
     }
     componentDidMount() {
         let sliderItems = document.querySelectorAll('.slider-item');
-        sliderItems.forEach(result => {
-            result.style.backgroundImage = `url(${result.getAttribute('data-image')})`;
+        let images = this.state.images;
+        sliderItems.forEach( function (result , i) {
+            result.style.backgroundImage = `url(${images[i]['img']})`;
         })
     }
 
     render(){
+        const {images} = this.state;
+        let items = [];
+        images.forEach((result , i) => {
+            items.push(<SwiperSlide>
+                <div className={'slider-item'} data-image={images[i]['img']}>
+                    <h2>{images[i]['text']}</h2>
+                </div>
+            </SwiperSlide>)
+        })
         return(
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar]}
@@ -32,21 +55,7 @@ class Slider extends Component{
                 navigation
                 pagination={{ clickable: true }}
             >
-                <SwiperSlide>
-                    <div className={'slider-item'}  data-image={image1}>
-
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className={'slider-item'} data-image={image2}>
-
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className={'slider-item'} data-image={image3}>
-
-                    </div>
-                </SwiperSlide>
+                {items}
             </Swiper>
         )
     }
