@@ -1,14 +1,14 @@
-.swiper-wrapper{
+.carousel .swiper-wrapper{
     width: 100%;
     height: 100vh;
 }
-.swiper-wrapper .slider-item{
+.carousel .swiper-wrapper .slider-item{
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     background-position: center;
 }
-.swiper-wrapper .slider-item h2{
+.carousel .swiper-wrapper .slider-item h2{
     position: absolute;
     top : 50%;
     right: 50%;
@@ -25,13 +25,13 @@
     justify-content: center;
 }
 @media (max-width:768px){
-    .swiper-wrapper .slider-item h2{
+    .carousel .swiper-wrapper .slider-item h2{
         width: 70%;
     }
 }
-.swiper-button-next , .swiper-button-prev{
+.carousel .swiper-button-next ,.carousel  .swiper-button-prev{
     color : #f2f2f2!important;
 }
-.swiper-pagination-bullet-active{
+.carousel .swiper-pagination-bullet-active{
     background : #f2f2f2!important;
 }

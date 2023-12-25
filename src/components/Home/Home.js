@@ -7,7 +7,9 @@ import CategorySlider from "../CategorySlider/CategorySlider";
 const Home = () => (
         <main>
             <Header />
-            <Slider />
+            <div className={'carousel'}>
+                <Slider />
+            </div>
             <div className={'category-slider'}>
                 <div className={'category-title-container'}>
                     <div className={'right'}>
