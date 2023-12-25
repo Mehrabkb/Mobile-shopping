@@ -16,9 +16,9 @@
     font-size : 2rem;
     color : #f2f2f2;
     background : rgba(0,0,0,.5);
-    width: 80%;
+    width: 100%;
     text-align: center;
-    height: 60%;
+    height: 100%;
     display: flex;
     align-items: center;
     line-height: 1.5;
@@ -26,7 +26,7 @@
 }
 @media (max-width:768px){
     .carousel .swiper-wrapper .slider-item h2{
-        width: 70%;
+        width: 100%;
     }
 }
 .carousel .swiper-button-next ,.carousel  .swiper-button-prev{

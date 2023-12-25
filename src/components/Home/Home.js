@@ -4,6 +4,7 @@ import './Home.css';
 import Header from "../Header/Header";
 import Slider from "../Slider/Slider";
 import CategorySlider from "../CategorySlider/CategorySlider";
+import MoreSalesProduct from "../MoreSalesProduct/MoreSalesProduct";
 const Home = () => (
         <main>
             <Header />
@@ -21,6 +22,23 @@ const Home = () => (
                     </div>
                 </div>
                 <CategorySlider />
+            </div>
+            <div className={'more-product-slider'}>
+                <div className={'title-section-container'}>
+                    <div className={'right'}>
+                        <hr/>
+                    </div>
+                    <h2>
+                        پرفروش ها
+                    </h2>
+                    <div className={'left'}>
+                        <hr/>
+                    </div>
+
+                </div>
+                <div className={'box'}>
+                    <MoreSalesProduct />
+                </div>
             </div>
         </main>
 );

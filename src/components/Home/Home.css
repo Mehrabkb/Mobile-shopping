@@ -20,3 +20,36 @@ h2.category-title{
     width: 20%;
     text-align: center;
 }
+.more-product-slider .box{
+    width: 90%;
+    margin : 0 auto;
+    height: 300px;
+    border : 1px solid #52ab98;
+    padding : 10px ;
+}
+.title-section-container {
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+.title-section-container > div{
+    width: 40%;
+}
+
+.title-section-container > div hr{
+    border-top : 3px solid #52ab98;
+}
+.title-section-container h2{
+    width: 20%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+@media (max-width: 768px){
+    .title-section-container > div{
+        width:30%;
+    }
+    .title-section-container h2{
+        width : 40%;
+    }
+}
