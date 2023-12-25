@@ -65,6 +65,9 @@ render(){
                 <button className={'close-absolute-menu'} onClick={() => this.menuButtonClick('hide')} >
                     <img src={menuCloseButton} />
                 </button>
+                <ul>
+                    {list}
+                </ul>
             </div>
         </header>)
     }
