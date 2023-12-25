@@ -1,5 +1,5 @@
 .category-slider .swiper-wrapper{
-    margin-top : 30px;
+    margin-top : 20px;
     padding : 0 30px;
 }
 .category-slider .swiper-wrapper .item{
@@ -9,6 +9,11 @@
     padding-top : 3%;
     box-sizing: border-box;
     border-radius: 10px;
+}
+@media (max-width: 768px){
+    .category-slider .swiper-wrapper .item{
+        width: 80%;
+    }
 }
 .category-slider .swiper-wrapper .item a img{
     width: 90%;

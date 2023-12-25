@@ -45,17 +45,32 @@ class CategorySlider extends Component{
                 </div>
             </SwiperSlide>)
         })
-        return(
-            <Swiper
-                modules={[Navigation, Pagination, Scrollbar]}
-                spaceBetween={30}
-                slidesPerView={5}
-                navigation
-                pagination={{ clickable: true }}
-            >
-                {cats}
-            </Swiper>
-        )
+        if(window.innerWidth >= 768){
+            return(
+                <Swiper
+                    modules={[Navigation, Pagination, Scrollbar]}
+                    spaceBetween={30}
+                    slidesPerView={5}
+                    navigation
+                    pagination={{ clickable: true }}
+                >
+                    {cats}
+                </Swiper>
+            )
+        }else{
+            return(
+                <Swiper
+                    modules={[Navigation, Pagination, Scrollbar]}
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{ clickable: true }}
+                >
+                    {cats}
+                </Swiper>
+            )
+        }
+
     }
 }
 export default CategorySlider;

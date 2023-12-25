@@ -9,6 +9,15 @@ const Home = () => (
             <Header />
             <Slider />
             <div className={'category-slider'}>
+                <div className={'category-title-container'}>
+                    <div className={'right'}>
+                        <hr/>
+                    </div>
+                    <h2 className={'category-title'}>دسته بندی</h2>
+                    <div className={'left'}>
+                        <hr/>
+                    </div>
+                </div>
                 <CategorySlider />
             </div>
         </main>
