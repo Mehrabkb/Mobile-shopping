@@ -38,3 +38,19 @@
 .header nav ul li:hover{
     background : #52ab98;
 }
+.header .logo{
+    width: 10%;
+    align-items: center;
+    height: 100%;
+}
+.header .logo a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .logo a img{
+    width: 50%;
+    height: 50%;
+}

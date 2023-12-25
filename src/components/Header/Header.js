@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Header.css';
+import logo from '../../images/logo.jpg';
 
 const menuList = ['خانه' , 'محصولات' , 'تماس با ما' , 'درباره ما']
 let list = [];
@@ -20,6 +21,11 @@ const Header = () => (
                 {list}
             </ul>
         </nav>
+        <div className={'logo'}>
+            <a>
+                <img src={logo} />
+            </a>
+        </div>
     </header>
 );
 
