@@ -54,8 +54,37 @@
     width: 50%;
     height: 70%;
 }
-@media (max-width: 768px){
-    .header{
-        display : none;
-    }
+.mobile-header{
+    background : #2b6777;
+    height: 60px;
+    display: flex;
+}
+.mobile-header .menu{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.mobile-header .menu .menu-button {
+    background : none;
+    border : none;
+}
+.mobile-header .menu .menu-button img{
+    width : 20px;
+}
+.mobile-header .logo{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.mobile-header .logo a{
+    text-align: center;
+}
+.mobile-header .logo a img{
+    width: 30%;
+}
+.mobile-header .empty{
+    width: 10%;
 }

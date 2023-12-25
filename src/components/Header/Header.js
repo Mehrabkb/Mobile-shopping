@@ -2,7 +2,7 @@ import React  , {Component} from 'react';
 import PropTypes from 'prop-types';
 import './Header.css';
 import logo from '../../images/logo.jpg';
-
+import menuButton from '../../images/menu.png';
 class Header extends Component{
 
     constructor(props) {
@@ -20,11 +20,10 @@ class Header extends Component{
                 <a href={'https://google.com'}>{item}</a></li>)
         });
         this.setState({list : temp_list});
-        console.log('list : ' + this.state.list);
     }
 
 render(){
-    const {menuList , list , } = this.state;
+    const {menuList , list} = this.state;
     if(window.innerWidth > 768){
         return  (<header className={'header'}>
                 <div className={'user-box'}>
@@ -44,7 +43,17 @@ render(){
         )
     }else{
         return (<header className={'mobile-header'}>
-            
+            <div className={'menu'}>
+                <button className={'menu-button'}>
+                    <img src={menuButton} />
+                </button>
+            </div>
+            <div className={'logo'}>
+                <a href={'https://google.com'}>
+                    <img src={logo} alt=""/>
+                </a>
+            </div>
+            <div className={'empty'}></div>
         </header>)
     }
     }
