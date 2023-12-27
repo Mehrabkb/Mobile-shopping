@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './Home.css';
 import Header from "../Header/Header";
 import Slider from "../Slider/Slider";
+import Footer from "../Footer/Footer";
 import CategorySlider from "../CategorySlider/CategorySlider";
 import MoreSalesProduct from "../MoreSalesProduct/MoreSalesProduct";
 import Ads from "../Ads/Ads";
@@ -55,6 +56,7 @@ const Home = () => (
                 </div>
                 <Ads />
             </div>
+            <Footer />
         </main>
 );
 
