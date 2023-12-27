@@ -1,0 +1,20 @@
+.ads{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+    flex-wrap: wrap;
+}
+.ads .item{
+    width : 45%;
+}
+.ads .item a img{
+    width: 100%;
+    height: 100%;
+}
+@media (max-width:768px){
+    .ads .item{
+        margin-top : 20px;
+        height: 150px;
+        width: 90%;
+    }
+}

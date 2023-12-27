@@ -5,6 +5,7 @@ import Header from "../Header/Header";
 import Slider from "../Slider/Slider";
 import CategorySlider from "../CategorySlider/CategorySlider";
 import MoreSalesProduct from "../MoreSalesProduct/MoreSalesProduct";
+import Ads from "../Ads/Ads";
 const Home = () => (
         <main>
             <Header />
@@ -39,6 +40,20 @@ const Home = () => (
                 <div className={'box'}>
                     <MoreSalesProduct />
                 </div>
+            </div>
+            <div className={'ads-container'}>
+                <div className={'title-section-container'}>
+                    <div className={'right'}>
+                        <hr/>
+                    </div>
+                    <h2>
+                        تبلیغات
+                    </h2>
+                    <div className={'left'}>
+                        <hr/>
+                    </div>
+                </div>
+                <Ads />
             </div>
         </main>
 );
