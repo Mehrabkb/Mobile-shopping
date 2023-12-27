@@ -1,11 +1,12 @@
 .ads{
     display: flex;
     justify-content: space-around;
-    height: 300px;
+    height: 250px;
     flex-wrap: wrap;
 }
 .ads .item{
     width : 45%;
+    height: 100%;
 }
 .ads .item a img{
     width: 100%;

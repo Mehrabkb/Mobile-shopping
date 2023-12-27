@@ -13,7 +13,7 @@ const Home = () => (
                 <Slider />
             </div>
             <div className={'category-slider'}>
-                <div className={'category-title-container'}>
+                <div className={'title-section-container'}>
                     <div className={'right'}>
                         <hr/>
                     </div>
