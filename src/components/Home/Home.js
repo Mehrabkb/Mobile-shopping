@@ -14,6 +14,7 @@ import {
     Route,
     Link,
 } from "react-router-dom";
+import Products from "../Products/Products";
 const Home = () => (
     <Router>
         <Header />
@@ -79,8 +80,14 @@ const Home = () => (
             path='aboutus'
             element={<About />}
         >
-            
         </Route>
+            <Route
+                excat
+                path='products'
+                element = {<Products />}
+            >
+
+            </Route>
         </Routes>
         <Footer />
     </Router>

@@ -4,12 +4,26 @@ import './Header.css';
 import logo from '../../images/logo.jpg';
 import menuButton from '../../images/menu.png';
 import menuCloseButton from '../../images/close.png';
+import { Link } from "react-router-dom";
 class Header extends Component{
 
     constructor(props) {
         super(props);
         this.state = {
-            menuList : ['خانه' , 'محصولات' , 'تماس با ما' , 'درباره ما'],
+            menuList : [
+                {
+                    'title' : 'خانه',
+                    'link' : '/'
+                },
+                {
+                  'title' : 'محصولات'  ,
+                  'link' : '/products'
+                },
+                {
+                    'title' : 'درباره ما',
+                    'link' : '/aboutus'
+                }
+            ],
             list : []
         }
     }
@@ -18,7 +32,7 @@ class Header extends Component{
         let temp_list = [];
         this.state.menuList.forEach((item , index) =>{
             temp_list.push(<li>
-                <a href={'https://google.com'}>{item}</a></li>)
+                <Link to={item.link}>{item.title}</Link></li>)
         });
         this.setState({list : temp_list});
     }
