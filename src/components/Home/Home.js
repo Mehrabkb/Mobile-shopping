@@ -7,57 +7,75 @@ import Footer from "../Footer/Footer";
 import CategorySlider from "../CategorySlider/CategorySlider";
 import MoreSalesProduct from "../MoreSalesProduct/MoreSalesProduct";
 import Ads from "../Ads/Ads";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link,
+} from "react-router-dom";
 const Home = () => (
-        <main>
-            <Header />
-            <div className={'carousel'}>
-                <Slider />
-            </div>
-            <div className={'category-slider'}>
-                <div className={'title-section-container'}>
-                    <div className={'right'}>
-                        <hr/>
-                    </div>
-                    <h2 className={'category-title'}>دسته بندی</h2>
-                    <div className={'left'}>
-                        <hr/>
-                    </div>
+    <Router>
+        <Header />
+        <Routes>   
+        <Route
+            exact
+            path = "/"
+            element = {
+                <main>
+                <div className={'carousel'}>
+                    <Slider />
                 </div>
-                <CategorySlider />
-            </div>
-            <div className={'more-product-slider'}>
-                <div className={'title-section-container'}>
-                    <div className={'right'}>
-                        <hr/>
+                <div className={'category-slider'}>
+                    <div className={'title-section-container'}>
+                        <div className={'right'}>
+                            <hr/>
+                        </div>
+                        <h2 className={'category-title'}>دسته بندی</h2>
+                        <div className={'left'}>
+                            <hr/>
+                        </div>
                     </div>
-                    <h2>
-                        پرفروش ها
-                    </h2>
-                    <div className={'left'}>
-                        <hr/>
-                    </div>
+                    <CategorySlider />
+                </div>
+                <div className={'more-product-slider'}>
+                    <div className={'title-section-container'}>
+                        <div className={'right'}>
+                            <hr/>
+                        </div>
+                        <h2>
+                            پرفروش ها
+                        </h2>
+                        <div className={'left'}>
+                            <hr/>
+                        </div>
 
-                </div>
-                <div className={'box'}>
-                    <MoreSalesProduct />
-                </div>
-            </div>
-            <div className={'ads-container'}>
-                <div className={'title-section-container'}>
-                    <div className={'right'}>
-                        <hr/>
                     </div>
-                    <h2>
-                        تبلیغات
-                    </h2>
-                    <div className={'left'}>
-                        <hr/>
+                    <div className={'box'}>
+                        <MoreSalesProduct />
                     </div>
                 </div>
-                <Ads />
-            </div>
-            <Footer />
-        </main>
+                <div className={'ads-container'}>
+                    <div className={'title-section-container'}>
+                        <div className={'right'}>
+                            <hr/>
+                        </div>
+                        <h2>
+                            تبلیغات
+                        </h2>
+                        <div className={'left'}>
+                            <hr/>
+                        </div>
+                    </div>
+                    <Ads />
+                </div>
+            </main>
+            }
+        >
+            
+        </Route>
+        </Routes>
+        <Footer />
+    </Router>
 );
 
 Home.propTypes = {};
