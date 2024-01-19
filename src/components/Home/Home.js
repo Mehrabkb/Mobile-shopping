@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import CategorySlider from "../CategorySlider/CategorySlider";
 import MoreSalesProduct from "../MoreSalesProduct/MoreSalesProduct";
 import Ads from "../Ads/Ads";
+import About from "../About/About";
 import {
     BrowserRouter as Router,
     Routes,
@@ -70,6 +71,13 @@ const Home = () => (
                 </div>
             </main>
             }
+        >
+            
+        </Route>
+        <Route
+            exact
+            path='aboutus'
+            element={<About />}
         >
             
         </Route>
