@@ -36,8 +36,8 @@
     text-align: center;
     margin: 10px 0;
 }
-.contact > p{
-    line-height: 1.5;
+.contact > p , .social-media {
+    line-height: 2 ;
 }
 .social-link {
     color: #fff;

@@ -3,6 +3,8 @@
     justify-content: space-around;
     height: 250px;
     flex-wrap: wrap;
+    width: 80%;
+    margin : 0 auto;
 }
 .ads .item{
     width : 45%;
